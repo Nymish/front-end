@@ -1,0 +1,59 @@
+<html>
+    <title>Form validation</title>
+    <head>
+        <div class="head">
+        <h1>Form Essentials</h1>
+    </div>
+    </head>
+    <style>
+        .box{
+            width: 300px;
+            text-align: center;
+            margin-left: 50%;
+            color: aqua;
+            border: 5px solid black;
+
+        }
+        .head{
+            text-align: center;
+        }
+
+
+    </style>
+    <script>
+        function details(){
+            var username=document.getElementById("Username").value;
+            var password=document.getElementById("Password").value;
+            var email=document.getElementById("email").value;
+            var age=document.getElementById("age").value;
+            console.log(username);
+            console.log(password)
+            
+            if(username=="Nymish" && password=="nymish2912" && email.includes("@") && age>=18)
+            {
+                document.getElementById("yes").innerHTML="Your form is valid";
+                return true;
+                
+            }
+            else{
+                document.getElementById("yes").innerHTML="Your form is not valid";
+                return false;
+            }
+        }
+
+    </script>
+    <body>
+        <div class="box">
+        <form >
+        <p>Username:</p><input type="text" placeholder="enter username" id="Username"><br>
+        <p>Password:</p><input type="text" placeholder="enter password" id="Password"><br>
+        <p>email:</p><input type="text" placeholder="enter email" id="email"><br>
+        <p>age:</p><input type="number" placeholder="enter age" id="age">  
+        <p id="yes"></p>
+        <input type="button" onclick="details()" value="submit">
+    </form> 
+    </div>      
+
+
+    </body>
+</html>
